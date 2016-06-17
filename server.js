@@ -7,6 +7,8 @@ const express = require('express'),
 
 let count = 0;
 
+app.use(express.static('public'));
+
 app.get('/api/counter', (req,res) => {
   res.json({count});
 });
